@@ -14,9 +14,8 @@ public class MainApp {
             reverseArr[i] = arr[arr.length - 1 - i];
         }
 
-        System.out.println("\tOriginal array -> " + Arrays.toString(arr) +
-                "\n\tReverse array -> " + Arrays.toString(reverseArr)
-        );
+        System.out.println("\tOriginal array -> " + Arrays.toString(arr));
+        System.out.println("\tReverse array -> " + Arrays.toString(reverseArr));
 
 
         // Задание: 2
@@ -35,11 +34,9 @@ public class MainApp {
             j++;
         }
 
-        System.out.printf("\tOld array -> " + Arrays.toString(arr2) +
-                "\n\tThe number %d has been deleted" +
-                "\n\tNew array -> " + Arrays.toString(newArr) + "\n",
-                 arr2[arr2.length/2]
-        );
+        System.out.println("\tOld array -> " + Arrays.toString(arr2));
+        System.out.printf("\tThe number %d has been deleted", arr2[arr2.length/2]);
+        System.out.println("\n\tNew array -> " + Arrays.toString(newArr));
 
         // Задание: 3
         // Даны два массива целых чисел. Необходимо найти все элементы (собрать из них массив) которые не встречаются в обоих массивах одновременно.
@@ -91,10 +88,9 @@ public class MainApp {
 
         Arrays.sort(uniqArray);
 
-        System.out.println("\tArray 1 -> " + Arrays.toString(array1) +
-                "\n\tArray 2 -> " + Arrays.toString(array2) +
-                "\n\tResult array -> " + Arrays.toString(uniqArray)
-        );
+        System.out.println("\tArray 1 -> " + Arrays.toString(array1));
+        System.out.println("\tArray 2 -> " + Arrays.toString(array2));
+        System.out.println("\tResult array -> " + Arrays.toString(uniqArray));
 
 
         // Задание: 4
@@ -122,7 +118,7 @@ public class MainApp {
             }
         }
 
-        System.out.printf("\tArray -> " + Arrays.toString(array4) +
-                "\n\tThe number '%d' occurs the maximum number of times (%d)\n", elem, index);
+        System.out.println("\tArray -> " + Arrays.toString(array4));
+        System.out.printf("\tThe number '%d' occurs the maximum number of times (%d)\n", elem, index);
     }
 }
