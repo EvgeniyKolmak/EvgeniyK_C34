@@ -1,12 +1,10 @@
 package org.company.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public abstract class Employee {
 
     private String name;
@@ -14,12 +12,11 @@ public abstract class Employee {
     private int experience;
     private Post post;
 
-//    public model.Employee(String name, String surname, int workPeriod, model.Post post ) {
-//        this.name = name;
-//        this.surname = surname;
-//        this.workPeriod = workPeriod;
-//        this.post = post;
-//    }
+    public Employee(String name, String surname, int experience) {
+        this.name = name;
+        this.surname = surname;
+        this.experience = experience;
+    }
 
 
     @Override
@@ -30,30 +27,3 @@ public abstract class Employee {
                 ;
     };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -12,7 +12,9 @@ public class EmployeeService {
 
         for (Employee employee : director.getSubordinates()) {
             if (employee instanceof Director) {
-                return hasSubordinate((Director) employee, name);
+                if (hasSubordinate((Director) employee, name)) {
+                    return true;
+                }
             } else {
                 if (employee.getName().equals(name) || employee.getSurname().equals(name)) {
                     return true;

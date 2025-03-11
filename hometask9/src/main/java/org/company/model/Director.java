@@ -2,14 +2,16 @@ package org.company.model;
 
 import lombok.Getter;
 
+import java.util.Arrays;
+
 @Getter
 public class Director extends Employee {
 
     private Employee[] subordinates;
 
-
-    public Director(String name, String surname, int workPeriod, Post post) {
-        super(name, surname, workPeriod, post);
+    public Director(String name, String surname, int workPeriod) {
+        super(name, surname, workPeriod);
+        this.setPost(Post.DIRECTOR);
         this.subordinates = new Employee[0];
     }
 
@@ -21,52 +23,17 @@ public class Director extends Employee {
             subordinates = newEmployees;
         }
         else {
-            System.out.println("model.Employee is null");
+            System.out.println("Employee is null");
         }
-
-    }
-
-    public void hasSubordinate(String name) {
 
     }
 
     @Override
-    public String toString() {
-        String data = "Director {" +
-                super.toString() +
-                '}';
-
-        if(subordinates.length > 0) {
-            data += "\n\t" + "Subordinates: ";
-            for (Employee employee : subordinates) {
-                data +=  "\n\t\t" + employee.toString();
-            }
-        }
-
-        return data;
+        public String toString() {
+        return "Director {" +
+                    super.toString() +
+                    " Subordinates: " + Arrays.toString(subordinates) +
+                    '}';
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
